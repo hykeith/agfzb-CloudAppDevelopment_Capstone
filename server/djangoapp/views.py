@@ -15,11 +15,18 @@ logger = logging.getLogger(__name__)
 
 
 # Create your views here.
-
+def dealer_list(request):
+    context = {}
+    return render(request, 'dealerships/dealer_list.html', context)
 
 # Create an `about` view to render a static about page
 # def about(request):
 # ...
+def about(request):
+    return render(request, 'djangoapp/about.html')
+
+def contact(request):
+    return render(request, 'djangoapp/contact.html')
 
 
 # Create a `contact` view to return a static contact page
